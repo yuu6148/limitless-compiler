@@ -11,15 +11,15 @@ on:
       kernel_source:
         description: 'Kernel Source'
         required: true
-        default: 'https://github.com/ThRE-Team/android_kernel_xiaomi_sdm845.git'
+        default: 'https://github.com/LXJ200625/kernel_xiaomi_dipper_bpf5.4.git'
       kernel_branch:
         description: 'Kernel Branch'
         required: true
-        default: 'lineage-22.2-next'
+        default: 'bpf-5.4'
       defconfig:
         description: 'defconfig'
         required: true
-        default: 'vendor/xiaomi/mi845_defconfig'
+        default: 'nogravity_defconfig'
       ksu_url:
         description: 'KernelSU | false for disable'
         required: false
