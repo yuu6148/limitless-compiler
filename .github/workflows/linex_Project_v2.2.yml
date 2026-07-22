@@ -91,6 +91,18 @@ jobs:
             ${{ github.event.inputs.ksu_url }}
           fi
 
+      - name: Remove unsupported Polly flags
+        run: |
+           echo "Removing unsupported Polly flags..."
+
+              grep -RIl "polly" . | while read file; do
+                echo "Patching $file"
+                sed -i \
+                  -e '/polly-opt-fusion/d' \
+                  -e '/-mllvm.*polly/d' \
+                  "$file"
+              done
+
       - name: Compile Kernel
         env:
           KBUILD_BUILD_USER: "linex"
