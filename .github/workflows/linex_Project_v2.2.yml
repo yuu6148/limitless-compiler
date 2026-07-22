@@ -23,7 +23,7 @@ on:
       ksu_url:
         description: 'KernelSU | false for disable'
         required: false
-        default: 'curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.2.0'
+        default: ''
       clang_url:
         description: 'Clang | false for disable'
         required: false
